@@ -1,5 +1,7 @@
 package com.example.dwellingapp
 
+import android.widget.Toast
+
 abstract class Dwelling(private var residentsDwelling: Int) {
     abstract val buildingMaterial: String
     abstract val capacity: Int
@@ -9,5 +11,12 @@ abstract class Dwelling(private var residentsDwelling: Int) {
     }
 
     abstract fun floorArea(): Double
+
+    fun getRoom() {
+        if (residentsDwelling < capacity){
+            residentsDwelling++
+        }
+        else{}
+    }
 
 }
